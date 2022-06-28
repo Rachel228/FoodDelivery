@@ -7,6 +7,8 @@ npm install
 
 cd frontend
 
+npm install
+
 npm start
 
 ![image](https://user-images.githubusercontent.com/75263925/175645738-4c56babd-f6dd-4a02-b4bc-34279bcc50d3.png)
