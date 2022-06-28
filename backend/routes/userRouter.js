@@ -16,7 +16,7 @@ expressAsyncHandler(async(req,res)=>{
 
 );
 
-// post request for signining users
+
 userRouter.post('/signin',expressAsyncHandler(async(req,res)=>{
  const user= await User.findOne({email:req.body.email})
  if(user){
@@ -36,7 +36,7 @@ userRouter.post('/signin',expressAsyncHandler(async(req,res)=>{
 })
 );
 
-//post route for signup
+
 userRouter.post('/signup',expressAsyncHandler(async(req,res)=>{
         const user= await User.findOne({email:req.body.email})
         if(user){
@@ -63,7 +63,6 @@ userRouter.post('/signup',expressAsyncHandler(async(req,res)=>{
 
 );
 
-//post route for adding address
 
 userRouter.get('/shipping/:id',expressAsyncHandler(async(req,res)=>{
         const id =req.params.id
