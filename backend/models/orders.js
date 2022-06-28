@@ -6,7 +6,7 @@ const orderSchema = new moongoose.Schema({
         qty:{type:Number,required:true},
         image:{type:String,required:true},
         price:{type:Number,required:true},
-        // descripion:{type:Number,required:true},
+       
         product:{type:moongoose.Schema.Types.ObjectId,ref:'Product',required:true}
     }],
     shippingAddress:{
