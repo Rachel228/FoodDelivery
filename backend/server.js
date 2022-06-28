@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url';
 dotenv.config()
 
 const app = express();
-app.use(express.json())  // to parse body in json format (body parser)
+app.use(express.json())  
 app.use(express.urlencoded({extended:true}))
 const PORT= process.env.PORT || 5000
 const uri  = "mongodb+srv://root:root@cluster0.qilsz.mongodb.net/?retryWrites=true&w=majority";
@@ -26,8 +26,7 @@ app.use('/api/users',userRouter);
 app.use('/api/products',productRouter)
 app.use('/api/orders',orderRouter)
 
-//Serve static assests if in production
-// const __dirname = path.resolve();
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use(express.static(path.join(__dirname, '../frontend/build')))
